@@ -1,5 +1,12 @@
 *{
     margin: 0;
+    font-family: "arial", "Helvetica Neue";
+}
+
+@keyframes pisca{
+        0% {opacity: 0.2; }
+        50% {opacity: 1; } 
+        100% {opacity: 0.2; }
 }
 
 body{
@@ -25,14 +32,74 @@ body{
 
 .d1{
     flex: 1; 
+    display: flex;
 }
 
 .d1-left{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.d1-1{
+    height: 50px;
+    display: flex;
+    align-items: center
+}
+
+.d1-2{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d1-3{
+    height: 50px;
+}
+
+.numero{
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+.pisca {
+    animation-name: pisca;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.d1-4{
+    flex: 1;
+    line-height: 30px;
 }
 
 .d1-right{
     width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.d1-image{
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+}
+
+.d1-image img{
+    width: 100%;
+}
+
+.d1-image.small{
+    width: 80%;
+    font-size: 12px;
 }
 
 .d2{
